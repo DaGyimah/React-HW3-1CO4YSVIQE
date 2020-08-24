@@ -1,23 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Navbar from "./components/Navbar";
+import IntContent from "./components/IntContent";
+import WallpaperOne from "./components/WallpaperOne";
+import "./components/GlobalSummary.css";
+import "./components/ComponentsSummary.css";
+import "./components/LayoutSummary.css";
+import "./components/SampleWallpaper.css";
+
+// import logo from './logo.svg';
+// import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div>
+      <Navbar />
+      <header className="header">
+        <div className="container">
+          <IntContent />
+          <div className="sample-wallpaper">
+            <WallpaperOne imgUrl="./assets/venom-1.jpg" alt="Wallpaper #1" />
+            <WallpaperOne imgUrl="./assets/hulk-1.jpg" alt="Wallpaper #1" />
+            <WallpaperOne imgUrl="./assets/venom-2.jpg" alt="Wallpaper #1" />
+          </div>
+        </div>
       </header>
     </div>
   );
